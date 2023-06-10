@@ -1,0 +1,16 @@
+@mixin list-reset {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+@mixin psevdo-element ($width, $height) {
+  width: $width;
+  height: $height;
+  display: inline-block;
+  content: "";
+}
+@mixin media ($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
