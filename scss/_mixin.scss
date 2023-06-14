@@ -3,14 +3,23 @@
   padding-left: 0;
   list-style: none;
 }
+
 @mixin psevdo-element ($width, $height) {
   width: $width;
   height: $height;
   display: inline-block;
   content: "";
 }
+
 @mixin media ($min-width) {
   @media only screen and (min-width: $min-width) {
     @content;
   }
+}
+
+@mixin flex-box ($flex-direction , $justifiy-content, $align-items) {
+  display: flex;
+  justify-content: $justifiy-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
 }
