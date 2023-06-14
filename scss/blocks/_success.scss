@@ -1,0 +1,158 @@
+@import "../mixin";
+@import "../fonts";
+
+.success {
+    width: 100%;
+    padding-bottom: 164px;
+    background-color: #004047;
+}
+
+.success__psedo::before {
+    display: block;
+    margin-bottom: 40px;
+    background-image: url("/images/lines.svg");
+    width: 147px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: " ";
+}
+
+.success__inner {
+    @include flex-box (column, center, center);
+}
+
+.success__text-box {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.success__title {
+    margin: 0;
+    margin-bottom: 84px;
+    font-family: "Livvic";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--main-white-text-color);
+}
+
+.success__title-green-text {
+    color: #79C8C7
+}
+
+.success__list {
+    @include list-reset;
+    @include flex-box (column, center, center);
+}
+
+.success__item:not(:last-child) {
+    margin-bottom: 84px;
+}
+
+.success__link {
+    margin: 0;
+    text-decoration: none;
+    display: block;
+}
+
+.success__block {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: 327px;
+    width: 100%;
+}
+
+.success__cite-part {
+    margin: 0;
+    font-family: "Livvic";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--main-white-text-color);
+}
+
+.success__cite-part::before {
+    position: absolute;
+    z-index: -1;
+    width: 67px;
+    height: 56px;
+    background-image: url("/images/blocquite.svg");
+    background-size: contain;
+    content: " ";
+    top: calc(50% - 86px);
+    left: calc(50% - 40px);
+
+}
+
+
+
+.success__name {
+    margin: 0;
+    margin-bottom: 2px;
+    font-family: "Livvic";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #79C8C7;
+}
+
+.success__desc {
+    position: relative;
+    margin: 0;
+    font-family: "Livvic";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--main-white-text-color);
+    font-style: italic;
+}
+
+.success__desc::after {
+    display: block;
+    width: 62px;
+    height: 62px;
+    margin: 16px auto 0;
+    background-image: url("/images/kadybaker.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    content: " ";
+
+
+
+}
+
+@include media (375px) {
+    .success__text-box {
+        max-width: 327px;
+        width: 100%;
+    }
+
+    .success__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .success__cite-part {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .success__desc {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    
+}
